@@ -12,6 +12,20 @@ The project uses machine learning, feature engineering, threshold tuning, hyperp
 
 ---
 
+## Final Result
+
+The final Optuna-tuned XGBoost model with threshold tuning achieved:
+
+- **Precision:** 100%
+- **Recall:** 90%
+- **F1-score:** 95%
+- **False Positives:** 0
+- **Fraud Detected:** 35 out of 39
+
+This is the part recruiters will notice quickly.
+
+---
+
 ## Problem Statement
 
 Digital payment fraud is a major challenge for banks, fintech companies, and online payment platforms. Fraudulent transactions are usually rare compared to normal transactions, making this a highly imbalanced classification problem.
@@ -168,6 +182,10 @@ Optuna was also used for hyperparameter tuning of the XGBoost model.
 | XGBoost | 0.9999 | 0.9722 | 0.8974 | 0.9333 | 0.9817 | 0.9128 |
 | Optuna-tuned XGBoost | 0.9999 | 0.9459 | 0.8974 | 0.9211 | 0.9694 | 0.9187 |
 
+<p align="center">
+  <img src="reports/figures/model_comparison.png" alt="Model Comparison" width="85%" />
+</p>
+
 ---
 
 ## Final Model
@@ -208,6 +226,10 @@ weighted avg       1.00      1.00      1.00     71078
  [    4    35]]
 ```
 
+<p align="center">
+  <img src="reports/figures/confusion_matrix.png" alt="Confusion Matrix" width="55%" />
+</p>
+
 ### Interpretation
 
 The final tuned model:
@@ -233,6 +255,10 @@ Instead of only predicting fraud or non-fraud, the system converts fraud probabi
 | Low probability | APPROVE |
 | Medium probability | MANUAL_REVIEW |
 | High probability | BLOCK |
+
+<p align="center">
+  <img src="reports/figures/risk_decision_summary.png" alt="Risk Decision Summary" width="50%" />
+</p>
 
 Example logic:
 
@@ -263,6 +289,10 @@ Example reasons:
 - Transfer transaction type
 - Cash-out transaction type
 
+<p align="center">
+  <img src="reports/figures/high_risk_transactions.png" alt="High-Risk Transaction Output" width="90%" />
+</p>
+
 This improves interpretability for fraud analysts.
 
 ---
@@ -273,6 +303,10 @@ Model explainability was added using:
 
 - XGBoost feature importance
 - SHAP explainability
+
+<p align="center">
+  <img src="reports/figures/feature_importance.png" alt="Feature Importance" width="75%" />
+</p>
 
 SHAP was used to understand:
 
