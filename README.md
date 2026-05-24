@@ -1,7 +1,7 @@
-# Fraud Detection Project
+# Real-Time Digital Payment Fraud Detection System
 
 ## 🎯 Goal
-Detect fraudulent transactions using machine learning techniques on the **[Kaggle Credit Card Fraud Detection dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)**.
+Detect fraudulent transactions using machine learning techniques on the mobile money transfer **[PaySim / Synthetic Financial Dataset for Fraud Detection](https://www.kaggle.com/datasets/ealaxi/paysim1)**.
 
 ## 📂 Project Structure
 ```
@@ -28,7 +28,7 @@ fraud-detection-project/
 
 ## 🛠️ Installation
 ```bash
-# Clone the repo (once it exists on GitHub)
+# Clone the repo
 git clone https://github.com/DivyanshuHeroo/fraud-detection-project.git
 cd fraud-detection-project
 
@@ -47,7 +47,7 @@ jupyter notebook notebooks/fraud_detection_project.ipynb
 ```
 The notebook walks through:
 1. Data loading & exploratory analysis
-2. Feature engineering
+2. Feature engineering (extracting transaction patterns, account discrepancies)
 3. Model training with **XGBoost**, hyper‑parameter tuning via **Optuna**, and interpretability with **SHAP**
 4. Evaluation on an imbalanced dataset using **imbalanced‑learn** utilities
 
@@ -57,6 +57,3 @@ The notebook walks through:
 
 ## 📜 License
 This project is licensed under the **MIT License** – see the `LICENSE` file for details.
-
----
-*Created with 💡 Antigravity – your AI‑powered coding companion.*
